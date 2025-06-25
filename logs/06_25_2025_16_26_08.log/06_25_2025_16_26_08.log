@@ -1,0 +1,12 @@
+2025-06-25 16:26:13,398 - root - INFO - Logging is working
+2025-06-25 16:26:13,398 - root - INFO - Starting data ingestion process...
+2025-06-25 16:26:15,355 - root - INFO - Data exported from MongoDB collection successfully.
+2025-06-25 16:26:15,666 - root - INFO - Feature store file created at: artifacts/06_25_2025_16_26_10/data_ingestion/feature_store/phishingData.csv
+2025-06-25 16:26:15,667 - root - INFO - Data exported to feature store successfully.
+2025-06-25 16:26:15,677 - root - INFO - Data split into training and testing sets successfully.
+2025-06-25 16:26:15,677 - root - INFO - Created directory for training and testing files: artifacts/06_25_2025_16_26_10/data_ingestion/ingested
+2025-06-25 16:26:15,860 - root - INFO - Training data saved to: artifacts/06_25_2025_16_26_10/data_ingestion/ingested/training_file.csv
+2025-06-25 16:26:15,860 - root - INFO - Testing data saved to: artifacts/06_25_2025_16_26_10/data_ingestion/ingested/testing_file.csv
+2025-06-25 16:26:15,860 - root - INFO - Data split into training and testing sets successfully.
+2025-06-25 16:26:15,860 - root - INFO - Data ingestion process completed successfully.
+2025-06-25 16:26:15,865 - root - INFO - Data ingestion artifact: DataIngestionArtifact(trained_file_path='artifacts/06_25_2025_16_26_10/data_ingestion/ingested/training_file.csv', testing_file_path='artifacts/06_25_2025_16_26_10/data_ingestion/ingested/testing_file.csv')
