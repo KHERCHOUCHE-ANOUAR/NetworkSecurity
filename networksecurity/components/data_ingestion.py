@@ -41,8 +41,9 @@ class DataIngestion:
 
             # Fetch all documents from the collection
             data = pd.DataFrame(list(collection.find()))
+            
             if '_id' in data.columns.tolist():
-                data.drop(columns=['_id'], axis=1)
+                data.drop(columns=['_id'], axis=1,inplace=True)
             data.replace("na", np.nan, inplace=True)
             if data.empty:
                 raise ValueError("No data found in the collection.")

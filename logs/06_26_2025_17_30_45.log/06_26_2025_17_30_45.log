@@ -1,0 +1,26 @@
+2025-06-26 17:30:46,850 - root - INFO - Logging is working
+2025-06-26 17:30:46,850 - root - INFO - Starting data ingestion process...
+2025-06-26 17:30:47,998 - root - INFO - Data exported from MongoDB collection successfully.
+2025-06-26 17:30:48,054 - root - INFO - Feature store file created at: artifacts/06_26_2025_17_30_46/data_ingestion/feature_store/phishingData.csv
+2025-06-26 17:30:48,054 - root - INFO - Data exported to feature store successfully.
+2025-06-26 17:30:48,056 - root - INFO - Data split into training and testing sets successfully.
+2025-06-26 17:30:48,056 - root - INFO - Created directory for training and testing files: artifacts/06_26_2025_17_30_46/data_ingestion/ingested
+2025-06-26 17:30:48,111 - root - INFO - Training data saved to: artifacts/06_26_2025_17_30_46/data_ingestion/ingested/training_file.csv
+2025-06-26 17:30:48,111 - root - INFO - Testing data saved to: artifacts/06_26_2025_17_30_46/data_ingestion/ingested/testing_file.csv
+2025-06-26 17:30:48,111 - root - INFO - Data split into training and testing sets successfully.
+2025-06-26 17:30:48,111 - root - INFO - Data ingestion process completed successfully.
+2025-06-26 17:30:48,112 - root - INFO - Data ingestion artifact: DataIngestionArtifact(trained_file_path='artifacts/06_26_2025_17_30_46/data_ingestion/ingested/training_file.csv', testing_file_path='artifacts/06_26_2025_17_30_46/data_ingestion/ingested/testing_file.csv')
+2025-06-26 17:30:48,134 - root - INFO - Required number of columns:31
+2025-06-26 17:30:48,134 - root - INFO - Data frame has columns:31
+2025-06-26 17:30:48,135 - root - INFO - Required number of columns:31
+2025-06-26 17:30:48,135 - root - INFO - Data frame has columns:31
+2025-06-26 17:30:48,296 - root - INFO - Data validation artifact: DataValidationArtifact(validation_status=True, valid_train_file_path='artifacts/06_26_2025_17_30_46/data_ingestion/ingested/training_file.csv', valid_test_file_path='artifacts/06_26_2025_17_30_46/data_ingestion/ingested/testing_file.csv', invalid_train_file_path=None, invalid_test_file_path=None, drift_report_file_path='artifacts/06_26_2025_17_30_46/data_validation/drift_report/report.yaml')
+2025-06-26 17:30:48,296 - root - INFO - Entered initiate_data_transformation method of DataTransformation class
+2025-06-26 17:30:48,296 - root - INFO - Starting data transformation
+2025-06-26 17:30:48,316 - root - INFO - Entered get_data_trnasformer_object method of Trnasformation class
+2025-06-26 17:30:48,316 - root - INFO - Initialise KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+2025-06-26 17:30:48,325 - root - INFO - Entered the save_object method of MainUtils class
+2025-06-26 17:30:48,328 - root - INFO - Exited the save_object method of MainUtils class
+2025-06-26 17:30:48,328 - root - INFO - Entered the save_object method of MainUtils class
+2025-06-26 17:30:48,330 - root - INFO - Exited the save_object method of MainUtils class
+2025-06-26 17:30:48,330 - root - INFO - Data transformation artifact: DataTransformationArtifact(transformed_object_file_path='artifacts/06_26_2025_17_30_46/data_transformation/transformed_object/preprocessing.pkl', transformed_train_file_path='artifacts/06_26_2025_17_30_46/data_transformation/transformed/training_file.npy', transformed_test_file_path='artifacts/06_26_2025_17_30_46/data_transformation/transformed/testing_file.npy')
