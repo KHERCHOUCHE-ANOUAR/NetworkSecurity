@@ -8,5 +8,11 @@ scikit-learn
 scipy
 pyaml
 dill
+mlflow==2.9.1
+dvc_s3
+dagshub
+fastapi
+uvicorn
+python-multipart
 
 -e .

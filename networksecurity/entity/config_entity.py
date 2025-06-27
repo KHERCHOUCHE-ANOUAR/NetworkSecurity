@@ -13,7 +13,8 @@ class TrainingPipelineConfigEntity:
         self.pipeline_name: str = training_pipeline.PIPELINE_NAME
         self.artifacts_name: str = training_pipeline.ARTIFACTS_DIR
         self.artifacts_dir: str = os.path.join(self.artifacts_name, self.timestamp)
-
+        self.model_dir=os.path.join("final_model")
+        self.timestamp: str=timestamp
 
 class DataIngestionConfig:
     def __init__(self, training_pipeline_config_entity: TrainingPipelineConfigEntity):

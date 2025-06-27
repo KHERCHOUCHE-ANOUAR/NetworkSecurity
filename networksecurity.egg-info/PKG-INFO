@@ -13,6 +13,12 @@ Requires-Dist: scikit-learn
 Requires-Dist: scipy
 Requires-Dist: pyaml
 Requires-Dist: dill
+Requires-Dist: mlflow==2.9.1
+Requires-Dist: dvc_s3
+Requires-Dist: dagshub
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: python-multipart
 Dynamic: author
 Dynamic: author-email
 Dynamic: requires-dist
