@@ -1,7 +1,7 @@
 FROM python:3.10-slim-buster
 WORKDIR /app
 COPY . /app
-
+COPY .env /app/.env  
 RUN apt-get update && \
     apt-get install -y ca-certificates curl apt-transport-https lsb-release gnupg && \
     curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null && \

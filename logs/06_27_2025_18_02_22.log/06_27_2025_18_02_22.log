@@ -1,0 +1,6 @@
+2025-06-27 18:02:26,180 - httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+2025-06-27 18:02:26,185 - dagshub - INFO - Accessing as KHERCHOUCHE-ANOUAR
+2025-06-27 18:02:26,493 - httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/KHERCHOUCHE-ANOUAR/NetworkSecurity "HTTP/1.1 200 OK"
+2025-06-27 18:02:26,800 - httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+2025-06-27 18:02:26,801 - dagshub - INFO - Initialized MLflow to track repo "KHERCHOUCHE-ANOUAR/NetworkSecurity"
+2025-06-27 18:02:26,802 - dagshub - INFO - Repository KHERCHOUCHE-ANOUAR/NetworkSecurity initialized!
