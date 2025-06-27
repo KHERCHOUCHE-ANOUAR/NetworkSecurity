@@ -46,30 +46,30 @@ jobs:
           docker build -t $ACR_LOGIN_SERVER/networksecurity:$IMAGE_TAG .
           docker push $ACR_LOGIN_SERVER/networksecurity:$IMAGE_TAG
 
-  deploy-container:
-    name: Continuous Deployment
-    needs: build-and-push-acr-image
-    runs-on: self-hosted
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
+  # deploy-container:
+  #   name: Continuous Deployment
+  #   needs: build-and-push-acr-image
+  #   runs-on: self-hosted
+  #   steps:
+  #     - name: Checkout Code
+  #       uses: actions/checkout@v3
 
-      - name: Login to Azure ACR
-        run: |
-          echo "${{ secrets.AZURE_ACR_PASSWORD }}" | docker login ${{ secrets.AZURE_ACR_LOGIN_SERVER }} --username ${{ secrets.AZURE_ACR_USERNAME }} --password-stdin
+  #     - name: Login to Azure ACR
+  #       run: |
+  #         echo "${{ secrets.AZURE_ACR_PASSWORD }}" | docker login ${{ secrets.AZURE_ACR_LOGIN_SERVER }} --username ${{ secrets.AZURE_ACR_USERNAME }} --password-stdin
 
-      - name: Pull latest Docker image
-        run: |
-          docker pull ${{ secrets.AZURE_ACR_LOGIN_SERVER }}/networksecurity:latest
+  #     - name: Pull latest Docker image
+  #       run: |
+  #         docker pull ${{ secrets.AZURE_ACR_LOGIN_SERVER }}/networksecurity:latest
 
-      - name: Stop and remove previous container if running
-        run: |
-          docker ps -q --filter "name=networksecurity" | grep -q . && docker stop networksecurity && docker rm -fv networksecurity || echo "No container to remove"
+  #     - name: Stop and remove previous container if running
+  #       run: |
+  #         docker ps -q --filter "name=networksecurity" | grep -q . && docker stop networksecurity && docker rm -fv networksecurity || echo "No container to remove"
 
-      - name: Run Docker container to serve users
-        run: |
-          docker run -d -p 8080:8080 --ipc="host" --name=networksecurity ${{ secrets.AZURE_ACR_LOGIN_SERVER }}/networksecurity:latest
+  #     - name: Run Docker container to serve users
+  #       run: |
+  #         docker run -d -p 8080:8080 --ipc="host" --name=networksecurity ${{ secrets.AZURE_ACR_LOGIN_SERVER }}/networksecurity:latest
 
-      - name: Clean up unused Docker resources
-        run: |
-          docker system prune -f
+  #     - name: Clean up unused Docker resources
+  #       run: |
+  #         docker system prune -f
