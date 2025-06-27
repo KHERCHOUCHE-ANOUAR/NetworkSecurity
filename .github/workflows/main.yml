@@ -37,7 +37,9 @@ jobs:
       - name: Login to Azure ACR
         run: |
           echo "${{ secrets.AZURE_ACR_PASSWORD }}" | docker login ${{ secrets.AZURE_ACR_LOGIN_SERVER }} --username ${{ secrets.AZURE_ACR_USERNAME }} --password-stdin
-
+      - name: Create .env file
+        run: |
+          echo "URI=${{ secrets.MONGODB_URI }}" > .env
       - name: Build, tag, and push Docker image to ACR
         env:
           ACR_LOGIN_SERVER: ${{ secrets.AZURE_ACR_LOGIN_SERVER }}
